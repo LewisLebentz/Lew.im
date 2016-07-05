@@ -1,0 +1,23 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+# BEGIN S3/CloudFront Rewrite
+Options +FollowSymlinks
+rewriterule ^wp-content/uploads/(.*)$ http://dwiykxfi4gisu.cloudfront.net/$1 [r=301,nc]
+# END S3/CloudFront Rewrite
+
+# BEGIN XMLRPC Block
+<Files xmlrpc.php>
+  order allow,deny
+  deny from all
+  ErrorDocument 403 https://www.youtube.com/watch?v=dQw4w9WgXcQ
+</Files>
+# END XMLRPC Block
