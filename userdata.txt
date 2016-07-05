@@ -18,3 +18,6 @@ wget https://raw.githubusercontent.com/LewisLebentz/Website/master/htaccess
 mv htaccess .htaccess
 service httpd start
 chkconfig httpd on
+cd /etc
+rm -rf crontab
+wget https://raw.githubusercontent.com/LewisLebentz/Website/master/crontab
