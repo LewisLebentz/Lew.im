@@ -16,8 +16,9 @@ chmod -R 755 wp-content
 chown -R apache.apache wp-content
 wget https://raw.githubusercontent.com/LewisLebentz/Website/master/htaccess
 mv htaccess .htaccess
-service httpd start
-chkconfig httpd on
 cd /etc
 rm -rf crontab
 wget https://raw.githubusercontent.com/LewisLebentz/Website/master/crontab
+aws s3 sync --delete s3://lew-wordpress-code/ /var/www/html/
+service httpd start
+chkconfig httpd on
