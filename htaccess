@@ -11,7 +11,7 @@ RewriteRule . /index.php [L]
 
 # BEGIN S3/CloudFront Rewrite
 Options +FollowSymlinks
-rewriterule ^wp-content/uploads/(.*)$ http://dwiykxfi4gisu.cloudfront.net/$1 [r=301,nc]
+rewriterule ^wp-content/uploads/(.*)$ https://dwiykxfi4gisu.cloudfront.net/$1 [r=301,nc]
 # END S3/CloudFront Rewrite
 
 # BEGIN XMLRPC Block
