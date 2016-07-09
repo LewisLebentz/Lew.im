@@ -10,9 +10,10 @@ wget https://raw.githubusercontent.com/LewisLebentz/Website/master/httpd.conf
 cd /var/www/html
 aws s3 sync --delete s3://lew-wordpress-code/ /var/www/html/
 chmod -R 755 wp-content
-chown -R apache.apache wp-content
 wget https://raw.githubusercontent.com/LewisLebentz/Website/master/htaccess
 mv htaccess .htaccess
+cd /var/www
+chown -R apache.apache http
 cd /etc
 rm -rf crontab
 wget https://raw.githubusercontent.com/LewisLebentz/Website/master/crontab
