@@ -13,7 +13,7 @@ chmod -R 755 wp-content
 wget https://raw.githubusercontent.com/LewisLebentz/Website/master/htaccess
 mv htaccess .htaccess
 cd /var/www
-chown -R apache.apache http
+chown -R apache.apache html
 cd /etc
 rm -rf crontab
 wget https://raw.githubusercontent.com/LewisLebentz/Website/master/crontab
