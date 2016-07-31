@@ -1,7 +1,7 @@
 #!/bin/bash
 yum update -y
 yum install -y httpd24 php56
-yum install -y php56-devel php56-mysqlnd php56-pdo php56-mbstring
+yum install -y php56-devel php56-mysqlnd php56-pdo php56-mbstring php56-gd
 yum install -y stress
 cd /etc/httpd/conf
 cp httpd.conf httpdconfbackup.conf
