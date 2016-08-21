@@ -14,5 +14,4 @@ HOME=/
 # |  |  |  |  |
 # *  *  *  *  * user-name command to be executed
 */6 * * * * root aws s3 sync --delete /var/www/html/ s3://lew-wordpress-code/
-*/6 * * * * root aws s3 sync --delete /var/www/html/wp-content/uploads/ s3://lew-wordpress-media/
 */18 * * * * root aws s3 sync --delete s3://lew-wordpress-code/ /var/www/html/
