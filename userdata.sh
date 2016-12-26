@@ -8,7 +8,7 @@ cp httpd.conf httpdconfbackup.conf
 rm -rf httpd.conf
 wget https://raw.githubusercontent.com/LewisLebentz/Lew.im/master/httpd.conf
 cd /var/www/html
-aws s3 sync --delete s3://lew-wordpress-code/ /var/www/html/
+aws s3 sync --delete s3://lew-wp-code/ /var/www/html/
 chmod -R 755 wp-content
 wget https://raw.githubusercontent.com/LewisLebentz/Lew.im/master/htaccess
 mv htaccess .htaccess
